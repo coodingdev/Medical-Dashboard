@@ -20,7 +20,7 @@ export default function Home() {
           </h3>
           <p>Catch up on the latest update for the past 7days.</p>
         </div>
-        <div className="flex items-center gap-10">
+        <div className="flex w-full items-center justify-between">
           <Button
             className="w-[166px] h-[44px] flex items-center gap-10 rounded-none"
             variant="outline"
@@ -47,9 +47,7 @@ export default function Home() {
         <Chart />
         <CalenderComp />
       </div>
-      <div className="mt-8">
         <TableComponent />
-      </div>
     </div>
   );
 }

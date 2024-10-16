@@ -1,9 +1,12 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { Payment, columns } from "./Colum";
 import { DataTable } from "./Data-Table";
 
-async function getData(): Promise<Payment[]> {
+function getData(): Promise<Payment[]> {
   // Fetch data from your API here.
-  return [
+  return Promise.resolve([
     {
       id: "728ed52f",
       amount: 100,
@@ -11,14 +14,18 @@ async function getData(): Promise<Payment[]> {
       email: "m@example.com",
     },
     // ...
-  ];
+  ]);
 }
 
-export default async function TableComponent() {
-  const data = await getData();
+export default function TableComponent() {
+  const [data, setData] = useState<Payment[]>([]);
+
+  useEffect(() => {
+    getData().then(setData);
+  }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white my-8">
       <DataTable columns={columns} data={data} />
     </div>
   );

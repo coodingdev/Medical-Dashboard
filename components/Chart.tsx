@@ -79,7 +79,7 @@ const Chart = () => {
   return (
     <div
       data-aos="zoom-in"
-      className="bg-white p-3 flex-1 flex flex-col h-[450px]"
+      className="bg-white w-full p-3 flex-1 flex flex-col h-[450px]"
       id="chart"
     >
       <div className="flex items-center gap-48 mb-5">
