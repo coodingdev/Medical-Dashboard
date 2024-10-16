@@ -9,7 +9,7 @@ export const MobileSidebar = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <div className="md:hidden cursor-pointer">
+        <div className="md:hidden ml-2 cursor-pointer">
           <Menu />
         </div>
       </SheetTrigger>

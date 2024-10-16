@@ -93,7 +93,7 @@ const Chart = () => {
           />
           <p className="text-[12px] font-medium">Patient Statistics</p>
         </div>
-        <div className="flex items-center gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5">
           <div className="flex items-center gap-1">
             <div className="h-[10px] w-[10px] rounded-[50%] bg-[#0456AC]"></div>
             <p className="font-medium text-[10px]">Patient</p>
