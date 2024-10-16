@@ -1,3 +1,5 @@
+"use client";
+
 import { ChevronDown, ArrowUpRightFromCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SurgeryCard from "@/components/dashboard-cards/Surgery";
@@ -50,5 +52,4 @@ export default function Home() {
       </div>
     </div>
   );
-};
-
+}
