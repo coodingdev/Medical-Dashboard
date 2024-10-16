@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ReactApexChart from "react-apexcharts";
-
-import surgeryIcon from "../public/svg/surgeryIcon.svg";
+import dynamic from 'next/dynamic';
 import Image from "next/image";
 import AOS from "aos";
+
+import surgeryIcon from "../public/svg/surgeryIcon.svg";
+
+const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const Chart = () => {
   const [state, setState] = useState({
@@ -102,12 +104,14 @@ const Chart = () => {
           </div>
         </div>
       </div>
-      <ReactApexChart
-        options={state.options as any}
-        series={state.series}
-        type="bar"
-        height={350}
-      />
+      {typeof window !== 'undefined' && (
+        <ReactApexChart
+          options={state.options as any}
+          series={state.series}
+          type="bar"
+          height={350}
+        />
+      )}
     </div>
   );
 };
