@@ -16,7 +16,7 @@ const CalenderComp = () => {
   return (
     <div
       data-aos="zoom-in"
-      className="flex-1 mt-8 w-full flex flex-col bg-white p-3 py-5 h-[450px]"
+      className="flex-1 w-full flex flex-col bg-white p-3 py-5 h-[450px]"
     >
       <div className="flex items-center gap-48 mb-5">
         <div className="flex items-center gap-1">

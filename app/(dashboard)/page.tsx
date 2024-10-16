@@ -43,7 +43,7 @@ export default function Home() {
         <PatientCard />
         <OverallRoom />
       </div>
-      <div className="flex flex-col lg:flex-row  items-center gap-3 mt-8">
+      <div className="flex flex-col lg:flex-row  items-center gap-x-4 gap-y-8 mt-8">
         <Chart />
         <CalenderComp />
       </div>
